@@ -1,0 +1,6 @@
+The file drought.npz contains the following numpy arrays:
+* month: shape: (864,): indicates the time of the measurement, given in months after January 1951, e.g. value 0 indicates January 1951, value 12 indicates January 1952, et cetera.
+  There are a total of 864=12*72 measurements up until December 2022.
+* SMI: shape: (864,225,175): measurements of the soil moisture index (SMI) in each month (first axis) on a rectangular grid that covers Germany. The precise details of the map/grid projection are not relevant. For a given month index i the SMI[i,:,:] can simply be displayed as an image. Valid values lie in [0,1]. Grid cells that do not lie within Germany are marked by the fill value -9999 and these should be treated accordingly.
+* lat: shape (225,175): for each grid cell of the above images this contains the latitude coordinate. This is useful for placing particular cities on the map.
+* lon: shape (225,175): same as lat but for longitude
